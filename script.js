@@ -1,11 +1,3 @@
-// const tensor = document.getElementsByClassName('tensor');
-// console.log(tensor[0])
-// const hover = ()=> {
-//     tensor[0].classList.toggle('tensorHover')
-// }
-// tensor[0].addEventListener("mouseenter", hover)
-// tensor[0].addEventListener("mouseleave", hover)
-
 const button = document.getElementsByClassName('bulb');
 const nav = document.querySelector('nav')
 const navFont = document.getElementsByClassName('nav-main')
@@ -14,6 +6,13 @@ const p = document.getElementsByTagName('p')
 const cv = document.getElementsByClassName('cv')
 const proj = document.getElementsByClassName('proj-container')
 const contact = document.getElementsByClassName('contact-size')
+
+var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+    loop: true
+});
+
 const darkTheme = ()=> {
     nav.classList.toggle('lightBack');
     for (let i=0; i< navFont[0].getElementsByTagName('a').length; i++){
@@ -38,5 +37,15 @@ const darkTheme = ()=> {
     for (let i=0; i< contact.length; i++) {
         contact[i].classList.toggle('lightfont')
     }
+    app.classList.toggle('lightfont')
 }
 button[0].addEventListener("click", darkTheme)
+
+
+typewriter.typeString('Hi, I am Ato')
+    .pauseFor(2000)
+    .deleteAll()
+    .typeString('안녕 아토입니다')
+    .pauseFor(2000)
+    .deleteAll()
+    .start();

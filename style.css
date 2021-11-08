@@ -63,7 +63,8 @@ nav {
 
 
 .bigtext {
-    font-size: 8vw;
+    font-size: 6rem;
+    font-family: 'Barlow', sans-serif;
 }
 
 /* about */
@@ -214,6 +215,9 @@ nav {
 @media only screen and (max-width: 800px) {
     .nav-main li {
         padding: 15px 20px;
+    }
+    .bigtext {
+        font-size: 2.5rem;
     }
     .about-container {
         display: grid;
